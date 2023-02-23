@@ -5,7 +5,7 @@
 
     <!-- Public plugin name should be written in Title Case.
          Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-name -->
-    <name>Dok Code Formatter</name>
+    <name>Dok Code Refactor</name>
 
     <!-- A displayed Vendor name or Organization ID displayed on the Plugins Page. -->
     <vendor email="dononcharles@gmail.com" url="https://www.dok-tech.com">DOK TECH</vendor>
@@ -14,8 +14,10 @@
          Simple HTML elements (text formatting, paragraphs, and lists) can be added inside of <![CDATA[ ]]> tag.
          Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-description -->
     <description><![CDATA[
-    This plugin helps to rename class parameters to match the regular expression ^`?[_a-z][a-zA-Z0-9]*`?$ and format the file content.<br>
-    <em>It's useful to respect syntax and have code cleaned. Shared naming conventions allow teams to collaborate effectively.</em>
+    This plugin helps to rename Kotlin classes parameters to match the regular expression ^`?[_a-z][a-zA-Z0-9]*`?$. It makes also the class content better readable by applying a format style.<br>
+    <em>It's useful to respect syntax, have code cleaned and successfully pass the continuous integrated code analyzer pipeline.</em>
+    <p>It supports Java 11</p>
+    <b>Shared naming conventions allow teams to collaborate effectively.</b>
   ]]></description>
 
     <!-- Product and plugin compatibility requirements.
@@ -32,10 +34,10 @@
         <action
                 id="com.doktech.doktechcodeformatplugin.action.PopupDialogAction"
                 class="com.doktech.doktechcodeformatplugin.action.DokTechCodeFormat"
-                text="Class Parameters Renaming"
-                description="Rename parameters to match the regular expression ^`?[_a-z][a-zA-Z0-9]*`?$"
+                text="Class Refactor with Dok"
+                description="Dok Code Refactor renames parameters to match the regular expression ^`?[_a-z][a-zA-Z0-9]*`?$"
                 icon="AllIcons.Actions.Lightning">
-            <override-text place="MainMenu" text="Format Class Code"/>
+            <override-text place="MainMenu" text="Refactor with Dok"/>
             <keyboard-shortcut first-keystroke="control alt D" keymap="$default" second-keystroke="K"/>
             <mouse-shortcut keymap="$default" keystroke="control button3 doubleClick"/>
             <add-to-group group-id="CodeMenu" anchor="last"/>

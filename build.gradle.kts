@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "com.doktech"
-version = "1.1.1"
+version = "1.2.0"
 
 repositories {
     google()
@@ -13,7 +13,7 @@ repositories {
 }
 
 dependencies {
-    implementation("org.jetbrains:marketplace-zip-signer:0.1.8")
+
 }
 
 // Configure Gradle IntelliJ Plugin
@@ -27,7 +27,7 @@ intellij {
 tasks {
     // Set the JVM compatibility versions
     withType<JavaCompile> {
-        sourceCompatibility = "11"
+        sourceCompatibility = "17"
         targetCompatibility = "11"
     }
     withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
