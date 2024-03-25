@@ -10,6 +10,12 @@
     <!-- A displayed Vendor name or Organization ID displayed on the Plugins Page. -->
     <vendor email="dononcharles@gmail.com" url="https://www.dok-tech.com">DOK TECH</vendor>
 
+    <change-notes>
+        <![CDATA[
+            <p>IDE Compatibility fixed</p>
+        ]]>
+    </change-notes>
+
     <!-- Description of the plugin displayed on the Plugin Page and IDE Plugin Manager.
          Simple HTML elements (text formatting, paragraphs, and lists) can be added inside of <![CDATA[ ]]> tag.
          Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-description -->
