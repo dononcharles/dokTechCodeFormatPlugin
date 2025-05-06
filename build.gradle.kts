@@ -1,11 +1,11 @@
 plugins {
     id("java")
-    id("org.jetbrains.kotlin.jvm") version "1.9.23"
-    id("org.jetbrains.intellij") version "1.17.2"
+    id("org.jetbrains.kotlin.jvm") version "2.1.10"
+    id("org.jetbrains.intellij") version "1.17.4"
 }
 
 group = "com.doktech"
-version = "1.5.1"
+version = "1.5.5"
 
 repositories {
     google()
@@ -30,13 +30,14 @@ tasks {
         sourceCompatibility = "17"
         targetCompatibility = "11"
     }
+
     withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
-        kotlinOptions.jvmTarget = "11"
+        compilerOptions.jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_11)
     }
 
     patchPluginXml {
-        sinceBuild.set("221")
-        untilBuild.set("233.*")
+        sinceBuild.set("233")
+        untilBuild.set("251.*")
     }
 
     signPlugin {
